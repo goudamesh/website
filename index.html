@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoudaMesh – Coming Soon</title>
+
+  <meta name="description" content="GoudaMesh is a local mesh network community in Gouda. Coming soon." />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+  :root {
+    /* Light mode (default) */
+    --accent: #8fbf9a;
+    --accent-warm: #f1f6f2;
+    --accent-dark: #2f5d3a;
+
+    --text-main: #222;
+    --text-muted: #555;
+    --bg: #f5f6f5;
+    --card-bg: #ffffff;
+    --border: #eee;
+  }
+
+  body.dark {
+    /* Dark mode */
+    --accent: #8fbf9a;
+    --accent-warm: #1f2a23;
+    --accent-dark: #b6e0c0;
+
+    --text-main: #e6e6e6;
+    --text-muted: #b5b5b5;
+    --bg: #141716;
+    --card-bg: #1c1f1e;
+    --border: #2a2d2c;
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .container {
+    max-width: 640px;
+    padding: 2.6rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+
+  .logo {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1rem;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--accent-warm);
+    color: var(--accent-dark);
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--text-muted);
+    margin-bottom: 1.8rem;
+  }
+
+  p {
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
+  .lang-switch {
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .lang-switch button {
+    background: none;
+    border: none;
+    color: var(--accent-dark);
+    cursor: pointer;
+    margin: 0 0.4rem;
+    font-weight: 500;
+  }
+
+  .lang-switch button.active {
+    text-decoration: underline;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  .lang.active {
+    display: block;
+  }
+
+  .contact {
+    margin-top: 1.8rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+
+  .contact a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer {
+    margin-top: 2.2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* Dark mode toggle button */
+  .theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.35rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-main);
+  }
+</style>
+
+</head>
+
+<body>
+  <div class="container">
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+    🌙
+  </button>
+
+    <!-- Logo -->
+    <img src="logo.svg" alt="GoudaMesh logo" class="logo" />
+
+    <div class="lang-switch">
+      <button class="active" onclick="setLang('nl')">NL</button> |
+      <button onclick="setLang('en')">EN</button>
+    </div>
+
+    <div class="badge">Coming soon</div>
+
+    <!-- Nederlands -->
+    <div id="nl" class="lang active">
+     <h1>GoudaMesh</h1>
+<h2>Mesh-netwerken in Gouda</h2>
+
+
+
+<p>
+  Deze website is in ontwikkeling.
+</p>
+
+    </div>
+
+    <!-- English -->
+    <div id="en" class="lang">
+  <h1>GoudaMesh</h1>
+<h2>Mesh networks in Gouda</h2>
+
+
+
+<p>
+  This website is under construction.
+  
+</p>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="contact">
+      Contact: <br />
+      📧 <a href="mailto:goudamesh@proton.me">goudamesh@proton.me</a><br />
+     
+    </div>
+
+    <footer>
+      
+    </footer>
+  </div>
+
+  <script>
+  // Language switching (unchanged)
+  function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(lang).classList.add('active');
+    document.querySelector(`.lang-switch button[onclick="setLang('${lang}')"]`).classList.add('active');
+  }
+
+  // Dark mode logic
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const storedTheme = localStorage.getItem('theme');
+  const body = document.body;
+  const toggleBtn = document.querySelector('.theme-toggle');
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      body.classList.add('dark');
+      toggleBtn.textContent = '☀️';
+    } else {
+      body.classList.remove('dark');
+      toggleBtn.textContent = '🌙';
+    }
+  }
+
+  function toggleTheme() {
+    const isDark = body.classList.contains('dark');
+    const newTheme = isDark ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+  }
+
+  // Initial theme
+  if (storedTheme) {
+    applyTheme(storedTheme);
+  } else {
+    applyTheme(prefersDark ? 'dark' : 'light');
+  }
+</script>
+
+</body>
+</html>
