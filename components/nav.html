@@ -1,0 +1,41 @@
+<nav>
+    <div class="nav-left" onclick="loadPage('home')" style="cursor:pointer">
+        <!--svg width="40" height="40" viewBox="0 0 100 100" class="logo"-->
+        <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 134 36" role="img" aria-label="GoudaMesh logo" class="logo">
+              <!-- Background shape -->
+              <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--accent-dark)" opacity="1"></rect>
+
+              <!-- Nodes -->
+              <circle cx="08" cy="18" r="4" fill="var(--accent-warm)"></circle>
+              <circle cx="18" cy="08" r="4" fill="var(--accent-warm)"></circle>
+              <circle cx="28" cy="18" r="4" fill="var(--accent-warm)"></circle>
+
+              <!-- Links x-14 y-14 -->
+              <line x1="08" y1="18" x2="18" y2="08" stroke="var(--accent-warm)" stroke-width="2"></line>
+              <line x1="18" y1="08" x2="28" y2="18" stroke="var(--accent-warm)" stroke-width="2"></line>
+
+              <!-- Text -->
+              <text x="40" y="25" font-size="16" font-family="system-ui, sans-serif" fill="var(--accent-dark)" font-weight="600">
+                GoudaMesh
+              </text>
+            </svg>
+
+    </div>
+
+<div class="hamburger" onclick="toggleMenu()">
+        <span>☰</span>
+    </div>
+
+    <ul class="menu" id="main-menu">
+        <li><a href="#" onclick="loadPage('home')" data-i18n="nav-home">Home</a></li>
+        <li><a href="#" onclick="loadPage('mesh')" data-i18n="nav-mesh">Mesh</a></li>
+        <li><a href="#" onclick="loadPage('meedoen')" data-i18n="nav-meedoen">Meedoen</a></li>
+        <li><a href="#" onclick="loadPage('contact')" data-i18n="nav-contact">Contact</a></li>
+        
+        <li class="nav-tools">
+            <button onclick="toggleTheme()" title="Switch Theme">🌓</button>
+            <button onclick="switchLanguage('nl')">NL</button>
+            <button onclick="switchLanguage('en')">EN</button>
+        </li>
+    </ul>
+</nav>
