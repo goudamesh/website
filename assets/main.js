@@ -9,7 +9,7 @@ waitForPageLoad().then(() => {
   lucide.createIcons();
 });
 
-fetch("_navigation.html")
+fetch("https://goudamesh.nl/_navigation.html")
   .then(response => {
     return response.text();
   })
@@ -18,7 +18,7 @@ fetch("_navigation.html")
     navigationStyle()
   });
 
-fetch("_footer.html")
+fetch("https://goudamesh.nl/_footer.html")
   .then(response => {
     return response.text();
   })
