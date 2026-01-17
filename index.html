@@ -1,275 +1,118 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoudaMesh – Coming Soon</title>
+  <title>GoudaMesh - Mesh-netwerken in Gouda</title>
 
-  <meta name="description" content="GoudaMesh is a local mesh network community in Gouda. Coming soon." />
+  <meta name="description"
+    content="GoudaMesh is een lokaal initiatief dat mesh-netwerken in Gouda zichtbaar en begrijpelijk wil maken." />
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <!-- JS -->
+  <script src="assets/main.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
 
-  <style>
-  :root {
-    /* Light mode (default) */
-    --accent: #8fbf9a;
-    --accent-warm: #f1f6f2;
-    --accent-dark: #2f5d3a;
 
-    --text-main: #222;
-    --text-muted: #555;
-    --bg: #f5f6f5;
-    --card-bg: #ffffff;
-    --border: #eee;
-  }
 
-  body.dark {
-    /* Dark mode */
-    --accent: #8fbf9a;
-    --accent-warm: #1f2a23;
-    --accent-dark: #b6e0c0;
+ lucide.createIcons();
 
-    --text-main: #e6e6e6;
-    --text-muted: #b5b5b5;
-    --bg: #141716;
-    --card-bg: #1c1f1e;
-    --border: #2a2d2c;
-  }
-
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  .container {
-    max-width: 640px;
-    padding: 2.6rem;
-    background: var(--card-bg);
-    border-radius: 16px;
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
-    text-align: center;
-  }
-
-  .logo {
-    width: 56px;
-    height: 56px;
-    margin: 0 auto 1rem;
-  }
-
-  .badge {
-    display: inline-block;
-    background: var(--accent-warm);
-    color: var(--accent-dark);
-    padding: 0.45rem 0.8rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    margin-bottom: 1.2rem;
-  }
-
-  h1 {
-    font-size: 2.1rem;
-    margin-bottom: 0.4rem;
-  }
-
-  h2 {
-    font-size: 1.1rem;
-    font-weight: normal;
-    color: var(--text-muted);
-    margin-bottom: 1.8rem;
-  }
-
-  p {
-    line-height: 1.65;
-    margin-bottom: 1.2rem;
-  }
-
-  .lang-switch {
-    margin-bottom: 1.2rem;
-    font-size: 0.9rem;
-  }
-
-  .lang-switch button {
-    background: none;
-    border: none;
-    color: var(--accent-dark);
-    cursor: pointer;
-    margin: 0 0.4rem;
-    font-weight: 500;
-  }
-
-  .lang-switch button.active {
-    text-decoration: underline;
-  }
-
-  .lang {
-    display: none;
-  }
-
-  .lang.active {
-    display: block;
-  }
-
-  .contact {
-    margin-top: 1.8rem;
-    padding-top: 1.4rem;
-    border-top: 1px solid var(--border);
-    font-size: 0.9rem;
-  }
-
-  .contact a {
-    color: var(--accent-dark);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  footer {
-    margin-top: 2.2rem;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-  }
-
-  a {
-    color: var(--accent-dark);
-    text-decoration: underline;
-  }
-
-  a:hover,
-  a:focus {
-    text-decoration: none;
-  }
-
-  /* Dark mode toggle button */
-  .theme-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 0.35rem 0.6rem;
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: var(--text-main);
-  }
-</style>
-
+    
+  </script>
 </head>
 
 <body>
-  <div class="container">
-  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-    🌙
-  </button>
+  <!-- Navigatie -->
+  <nav class="delayed"></nav>
+
+  <div class="container delayed">
 
     <!-- Logo -->
-    <img src="logo.svg" alt="GoudaMesh logo" class="logo" />
+    <!--img src="logo.svg" alt="GoudaMesh logo" class="logo" /-->
 
-    <div class="lang-switch">
+    <!--div class="lang-switch">
       <button class="active" onclick="setLang('nl')">NL</button> |
       <button onclick="setLang('en')">EN</button>
-    </div>
+    </div-->
 
-    <div class="badge">Coming soon</div>
 
     <!-- Nederlands -->
-    <div id="nl" class="lang active">
-     <h1>GoudaMesh</h1>
-<h2>Mesh-netwerken in Gouda</h2>
+    <div id="body-nl" class="lang active">
+      <h1>Welkom bij GoudaMesh</h1>
+
+      Een lokaal initiatief dat uitnodigt tot experimenteren met mesh-netwerken in en rond Gouda.</p>
+
+      <h2>Wat is GoudaMesh?</h2>
+      <p><strong>GoudaMesh</strong> is een lokaal initiatief dat mesh-netwerken in de stad zichtbaar en begrijpelijk wil maken. We zijn geen officieel netwerk met een helpdesk, maar een uithangbord voor iedereen die wil experimenteren met open en decentrale communicatie in Gouda.</p>
+      <p>Onze focus ligt op <strong><a href="https://meshtastic.org/">Meshtastic</a></strong>: kleine radiozenders (nodes) die rechtstreeks met elkaar praten. Samen vormen ze een eigen netwerk, helemaal los van het internet, zonder abonnementen of centrale providers.
+      </p>
 
 
-
-<p>
-  Deze website is in ontwikkeling.
-</p>
-
-<p>
-  Kijk in de tussentijd ook eens naar <a href="https://potatonet.nl">Potatonet.nl</a> en <a href="https://nedermesh.nl">Nedermesh.nl</a>.
-</p>
+      <h2>Waarom mesh-netwerken?</h2>
+      <ul>
+        <li>
+          <p><strong>Volledig onafhankelijk:</strong> Het werkt altijd, ook zonder zendmasten of een werkende internetverbinding.</p>
+        </li>
+        <li>
+          <p><strong>Privacy by design:</strong> Berichten zijn versleuteld. Er wordt geen data verzameld of gevolgd.</p>
+        </li>
+        <li>
+          <p><strong>Samen sterker:</strong> Elke nieuwe node in de stad vergroot het bereik en de veerkracht van het netwerk voor iedereen.</p>
+        </li>
+      </ul>
+      <h2>Voor wie is dit?</h2>
+      <p>Voor elke nieuwsgierige Gouwenaar. Of je nu houdt van techniek of gewoon benieuwd bent hoe we als stad onafhankelijk bereikbaar kunnen blijven: interesse is de enige vereiste.</p>
+      <h2>Wil je meedoen?</h2>
+      <p>Begin klein en op je eigen tempo. Zie het als een digitale speeltuin voor de stad. Niets moet, ontdekken en experimenteren staan centraal.</p>
 
     </div>
 
     <!-- English -->
-    <div id="en" class="lang">
-  <h1>GoudaMesh</h1>
-<h2>Mesh networks in Gouda</h2>
-
-
-
-<p>
-  This website is under construction.
-  
-</p>
-
-<p>
-In the meantime, also check out <a href="https://potatonet.nl">Potatonet.nl</a> and <a href="https://nedermesh.nl">Nedermesh.nl</a>.
-</p>
-
-    </div>
-
-    <!-- Contact -->
-    <div class="contact">
-      Contact: <br />
-      📧 <a href="mailto:goudamesh@proton.me">goudamesh@proton.me</a><br />
-     
-    </div>
-
-    <footer>
+    <div id="body-en" class="lang">
+      <h1>Welcome to GoudaMesh</h1>
       
-    </footer>
+      A local initiative inviting you to experiment with mesh networks in and around Gouda.<p></p>
+
+      <h2>What is GoudaMesh?</h2>
+      <p><strong>GoudaMesh</strong> is a local initiative aimed at making mesh networks in the city visible and understandable. We are not an official network with a helpdesk, but rather a showcase for anyone who wants to experiment with open and decentralized communication in Gouda.</p>
+      <p>Our focus is on <strong><a href="https://meshtastic.org/">Meshtastic</a></strong>: small radio transmitters (nodes) that talk directly to each other. Together, they form a private network, completely independent of the internet, without subscriptions or central providers.</p>
+
+
+      <h2>Why mesh networks?</h2>
+      <ul>
+        <li>
+          <p><strong>Completely independent:</strong> It always works, even without cell towers or a functioning internet connection.</p>
+        </li>
+        <li>
+          <p><strong>Privacy by design:</strong> Messages are encrypted. No data is collected or tracked.</p>
+        </li>
+        <li>
+          <p><strong>Stronger together:</strong> Every new node in the city increases the range and resilience of the network for everyone.</p>
+        </li>
+      </ul>
+      <h2>Who is this for?</h2>
+      <p>For every curious resident of Gouda. Whether you love technology or are just curious about how we can stay connected as a city independently: interest is the only requirement.</p>
+      <h2>Want to join?</h2>
+      <p>Start small and at your own pace. Think of it as a digital playground for the city. There are no obligations; discovery and experimentation are key.</p>
+
+    </div>
+    <footer class="delayed"></footer>
   </div>
 
+    <!-- JS als laatste -->
+  <script src="assets/main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
-  // Language switching (unchanged)
-  function setLang(lang) {
-    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
-
-    document.getElementById(lang).classList.add('active');
-    document.querySelector(`.lang-switch button[onclick="setLang('${lang}')"]`).classList.add('active');
-  }
-
-  // Dark mode logic
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const storedTheme = localStorage.getItem('theme');
-  const body = document.body;
-  const toggleBtn = document.querySelector('.theme-toggle');
-
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      body.classList.add('dark');
-      toggleBtn.textContent = '☀️';
-    } else {
-      body.classList.remove('dark');
-      toggleBtn.textContent = '🌙';
-    }
-  }
-
-  function toggleTheme() {
-    const isDark = body.classList.contains('dark');
-    const newTheme = isDark ? 'light' : 'dark';
-    localStorage.setItem('theme', newTheme);
-    applyTheme(newTheme);
-  }
-
-  // Initial theme
-  if (storedTheme) {
-    applyTheme(storedTheme);
-  } else {
-    applyTheme(prefersDark ? 'dark' : 'light');
-  }
-</script>
-
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>

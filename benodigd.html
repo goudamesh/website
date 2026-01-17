@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GoudaMesh: Meedoen</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+  <!-- Navigatie hier -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">GoudaMesh</a>
+      <div class="nav-links">
+        <a href="mesh.html" class="nav-mesh">Mesh</a>
+        <a href="meedoen.html" class="nav-meedoen">Meedoen</a>
+        <a href="contact.html" class="nav-contact">Contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()">🌗</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Pagina-inhoud -->
+  <div class="container">
+    <div id="nl" class="lang">
+      <h1>Meedoen</h1>
+<h3 id="wat-heb-je-nodig-">Wat heb je nodig?</h3>
+<p>Om mee te doen koop je een klein apparaatje (vaak niet groter dan een aansteker) voor ongeveer €30,- tot €50,-. Er hoeft geen simkaart in en je betaalt nooit abonnementskosten.</p>
+<p>Voor beginners is het belangrijk om te kiezen voor een apparaat dat &quot;ready-to-go&quot; is. Hoewel je sommige losse printplaatjes zelf in elkaar moet zetten, zijn er tegenwoordig uitstekende complete opties.</p>
+<p>Hier zijn de 3 beste keuzes voor beginners in 2025:</p>
+<h3 id="1-de-smartphone-ervaring-lilygo-t-deck-plus-">1. De &quot;Smartphone&quot; ervaring: <strong>LilyGo T-Deck Plus</strong></h3>
+<p>Dit is het meest gebruiksvriendelijke apparaat. Het ziet eruit als een oude BlackBerry, inclusief scherm en een klein toetsenbordje.</p>
+<ul>
+<li><strong>Voordeel:</strong> Je hebt je telefoon niet per se nodig; je kunt direct op het apparaatje typen.</li>
+<li><strong>Ideaal voor:</strong> Mensen die een alles-in-één apparaat willen dat direct werkt.</li>
+<li><strong>Prijs:</strong> Ongeveer €80 - €100.</li>
+</ul>
+<h3 id="2-de-set-and-forget-seeed-studio-sensecap-t1000-e-">2. De &quot;Set-and-Forget&quot;: <strong>Seeed Studio SenseCAP T1000-E</strong></h3>
+<p>Dit apparaatje heeft het formaat van een creditcard en is super robuust.</p>
+<ul>
+<li><strong>Voordeel:</strong> Het is waterdicht en de batterij gaat erg lang mee. Er zit geen groot scherm op, dus je bedient hem volledig via de app op je telefoon.</li>
+<li><strong>Ideaal voor:</strong> Wandelaars, fietsers of om in je tas te stoppen voor noodgevallen.</li>
+<li><strong>Prijs:</strong> Ongeveer €40 - €50.</li>
+</ul>
+<h3 id="3-de-populaire-allrounder-heltec-v3-met-case-">3. De Populaire Allrounder: <strong>Heltec V3 (met case)</strong></h3>
+<p>Dit is de meest verkochte &quot;instapper&quot;. Let er wel op dat je de versie koopt die al in een plastic behuizing (case) zit.</p>
+<ul>
+<li><strong>Voordeel:</strong> Goedkoop en er is een enorme community die je kan helpen als je vragen hebt. Hij heeft een klein schermpje waarop je kunt zien of er andere mensen in de buurt zijn.</li>
+<li><strong>Ideaal voor:</strong> Mensen die voor een lage prijs willen experimenteren.</li>
+<li><strong>Prijs:</strong> Ongeveer €30 - €45.</li>
+</ul>
+<hr>
+<h3 id="belangrijk-om-op-te-letten-bij-aankoop-">Belangrijk om op te letten bij aankoop:</h3>
+<ul>
+<li><strong>Frequentie:</strong> In Europa <strong>moet</strong> je de <strong>868 MHz</strong> versie kopen. De 915 MHz versie is voor Amerika en is hier niet toegestaan (en werkt ook minder goed met andere Nederlandse gebruikers).</li>
+<li><strong>Antenne:</strong> Zorg dat er altijd een antenne bij zit. Zet het apparaat <strong>nooit</strong> aan zonder dat de antenne erop geschroefd is, anders kan het zendertje doorbranden.</li>
+</ul>
+<h3 id="waar-koop-je-dit-">Waar koop je dit?</h3>
+<p>In Nederland kun je kijken bij webshops zoals <strong>Tinytronics</strong>, <strong>Eleshop</strong> of via <strong>Amazon.nl</strong> en <strong>Bol.com</strong>. Als je wat langer kunt wachten en minder wilt betalen, is <strong>AliExpress</strong> de plek waar de meeste hobbyisten hun spullen halen.</p>
+
+    </div>
+    <div id="en" class="lang">
+      <h1>Join</h1>
+    </div>
+
+    <footer>
+      Een initiatief • Geen aanbieder • Open om te experimenteren
+    </footer>
+  </div>
+
+  <!-- JS als laatste -->
+  <script src="assets/main.js"></script>
+
+  <!-- Actieve pagina highlight -->
+  <script>
+    const page = location.pathname.split('/').pop();
+    if (page.includes('mesh')) document.querySelector('.nav-mesh')?.classList.add('active');
+    if (page.includes('meedoen')) document.querySelector('.nav-meedoen')?.classList.add('active');
+    if (page.includes('contact')) document.querySelector('.nav-contact')?.classList.add('active');
+  </script>
+
+</body>
+</html>
+

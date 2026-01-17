@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GoudaMesh: Contact</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+  <!-- Navigatie hier -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="GoudaMesh">
+        <!--svg class="logo-svg" viewBox="0 0 120 24" aria-hidden="true"-->
+        <!-- plak hier de inhoud van je SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134 36" role="img" aria-label="GoudaMesh logo"
+          class="logo-svg">
+          <!-- Background shape -->
+          <rect x="0" y="0" width="36" height="36" rx="8" fill=var(--accent-dark) opacity="1" />
+
+          <!-- Nodes -->
+          <circle cx="08" cy="18" r="4" fill=var(--accent-warm) />
+          <circle cx="18" cy="08" r="4" fill=var(--accent-warm) />
+          <circle cx="28" cy="18" r="4" fill=var(--accent-warm) />
+
+          <!-- Links x-14 y-14 -->
+          <line x1="08" y1="18" x2="18" y2="08" stroke=var(--accent-warm) stroke-width="2" />
+          <line x1="18" y1="08" x2="28" y2="18" stroke=var(--accent-warm) stroke-width="2" />
+
+          <!-- Text -->
+          <text x="40" y="25" font-size="16" font-family="system-ui, sans-serif" fill="currentColor" font-weight="600">
+            GoudaMesh
+          </text>
+        </svg>
+
+      </a>
+
+      <div class="nav-links">
+        <div id="menu-nl" class="lang active">
+          <a href="index.html" class="nav-welkom">Welkom</a>
+          <a href="mesh.html" class="nav-mesh">Mesh</a>
+          <a href="meedoen.html" class="nav-meedoen">Meedoen</a>
+          <a href="contact.html" class="nav-contact">Contact</a>
+        </div>
+        <div id="menu-en" class="lang">
+          <a href="index.html" class="nav-welkom">Welcome</a>
+          <a href="mesh.html" class="nav-mesh">Mesh</a>
+          <a href="meedoen.html" class="nav-meedoen">Meedoen</a>
+          <a href="contact.html" class="nav-contact">Contact</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌗</button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Pagina-inhoud -->
+  <div class="container delayed">
+
+    <!--div class="lang-switch">
+      <button class="active" onclick="setLang('nl')">NL</button> |
+      <button onclick="setLang('en')">EN</button>
+    </div-->
+
+    <div id="body-nl" class="lang">
+      <h1>Contact</h1>
+<p><strong>GoudaMesh</strong> is een non-profit hobbyproject uit passie voor technologie en lokale connectiviteit.</p>
+
+<p>Heb je een leuk idee voor een experiment, wil je een samenwerking voorstellen of gewoon even laten weten dat je een node in de lucht hebt gebracht? Dat vinden we leuk om te horen! Je kunt ons vinden op de <a href="https://discord.gg/7rMvZNnKKb">GoudaMesh Discord-server</a> of natuurlijk een berichtje sturen via het lokale Meshtastic-netwerk.</P> Eventueel kun je ons ook mailen op <a href="mailto:goudamesh@proton.me">goudamesh@proton.me</a>
+
+<p>Goed om te weten: Omdat dit een kleinschalig initiatief is in onze vrije tijd, hebben we geen helpdesk. Voor technische vragen over hardware, installatie of troubleshooting verwijzen we je graag naar de uitgebreide <a href="https://meshtastic.org/docs/introduction/">Meshtastic Documentatie</a> of de wereldwijde <a href="https://discord.gg/meshtastic">Meshtastic Discord server</a>.</p>
+
+
+<h2>Privacy & Data</h2>
+<p><strong>Website:</strong> Deze website is volledig trackervrij. We gebruiken geen cookies en verzamelen geen gegevens over onze bezoekers. Je bezoek is dus anoniem.</p>
+
+<p><strong>Het netwerk:</strong> GoudaMesh monitort het publieke verkeer op het standaardkanaal (LongFast). De statistieken en berichten die we hieruit verzamelen, worden uitsluitend gebruikt om de dekking en activiteit van het netwerk in kaart te brengen.</p>
+
+<p>Belangrijk om te weten:
+<ul>
+<li><strong>Publiek domein:</strong> Het LongFast-kanaal is van nature openbaar; alle informatie die hierover verzonden wordt, is door iedereen met een antenne op te vangen.
+
+<li><strong>Eigen verantwoordelijkheid:</strong> Wil je privécommunicatie? Maak dan gebruik van privékanalen (met eigen encryptiesleutels) of Direct Messages. Deze gegevens zijn versleuteld en kunnen niet door ons of anderen worden meegelezen.
+
+<li><strong>Locatie:</strong> Je bent zelf in controle over het delen van je GPS-locatie via je node-instellingen.
+</ul></p>
+<h2>Disclaimer</h2>
+GoudaMesh is een experimenteel hobbyproject. Gebruik van de informatie op deze website en deelname aan het mesh-netwerk is volledig op eigen risico.
+
+Wij zijn niet verantwoordelijk voor de werking van hardware, de stabiliteit van het netwerk of eventuele schade die voortvloeit uit het gebruik van Meshtastic. Dit is een open-source experiment: er zijn geen garanties, geen service-levels en we bieden geen technische ondersteuning. Je bent zelf verantwoordelijk voor het naleven van lokale regelgeving met betrekking tot radiofrequenties en zendvermogen.
+
+<h2>100% Onafhankelijk</h2>
+GoudaMesh is een volledig onafhankelijk initiatief. We hebben geen commerciële belangen, worden niet gesponsord en zijn op geen enkele manier verbonden aan de fabrikanten van de hardware die we noemen. Alles wat we doen is op eigen titel, uit enthousiasme voor de technologie en de stad.
+
+
+    </div>
+<div id="body-en" class="lang">
+      <h1>Contact</h1>
+<p><strong>GoudaMesh</strong> is a non-profit hobby project born out of a passion for technology and local connectivity.</p>
+
+<p>Do you have a great idea for an experiment, want to suggest a collaboration, or just want to let us know that you've put a node 'on air'? We’d love to hear from you! You can find us on the <a href="https://discord.gg/7rMvZNnKKb">GoudaMesh Discord server</a> or, of course, send us a message via the local Meshtastic network.</p> You can also email us at <a href="mailto:goudamesh@proton.me">goudamesh@proton.me</a>
+
+<p>Good to know: Since this is a small-scale initiative run in our spare time, we do not have a helpdesk. For technical questions about hardware, installation, or troubleshooting, we refer you to the extensive <a href="https://meshtastic.org/docs/introduction/">Meshtastic Documentation</a> or the global <a href="https://discord.gg/meshtastic">Meshtastic Discord server</a>.</p>
+
+
+<h2>Privacy &amp; Data</h2>
+<p><strong>Website:</strong> This website is completely tracker-free. We do not use cookies and do not collect any data about our visitors. Your visit is therefore anonymous.</p>
+
+<p><strong>The Network:</strong> GoudaMesh monitors public traffic on the default channel (LongFast). The statistics and messages we gather from this are used exclusively to map the coverage and activity of the network.</p>
+
+<p>Important to know:
+</p><ul>
+<li><strong>Public Domain:</strong> The LongFast channel is public by nature; all information sent over it can be intercepted by anyone with an antenna.
+
+</li><li><strong>Personal Responsibility:</strong> Do you want private communication? Please use private channels (with your own encryption keys) or Direct Messages. This data is encrypted and cannot be read by us or others.
+
+</li><li><strong>Location:</strong> You are in full control of sharing your GPS location via your node settings.
+</li></ul><p></p>
+<h2>Disclaimer</h2>
+GoudaMesh is an experimental hobby project. Use of the information on this website and participation in the mesh network is entirely at your own risk.
+
+We are not responsible for the functioning of hardware, the stability of the network, or any damage resulting from the use of Meshtastic. This is an open-source experiment: there are no guarantees, no service levels, and we do not provide technical support. You are personally responsible for complying with local regulations regarding radio frequencies and transmission power.
+
+<h2>100% Independent</h2>
+GoudaMesh is a fully independent initiative. We have no commercial interests, are not sponsored, and are in no way affiliated with the manufacturers of the hardware we mention. Everything we do is in a personal capacity, driven by enthusiasm for the technology and the city.
+
+    </div>
+
+
+    <footer class="delayed"></footer>
+  </div>
+
+  <!-- JS als laatste -->
+  <script src="assets/main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>

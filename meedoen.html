@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GoudaMesh: Meedoen</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+  <!-- Navigatie hier -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="GoudaMesh">
+        <!--svg class="logo-svg" viewBox="0 0 120 24" aria-hidden="true"-->
+        <!-- plak hier de inhoud van je SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134 36" role="img" aria-label="GoudaMesh logo"
+          class="logo-svg">
+          <!-- Background shape -->
+          <rect x="0" y="0" width="36" height="36" rx="8" fill=var(--accent-dark) opacity="1" />
+
+          <!-- Nodes -->
+          <circle cx="08" cy="18" r="4" fill=var(--accent-warm) />
+          <circle cx="18" cy="08" r="4" fill=var(--accent-warm) />
+          <circle cx="28" cy="18" r="4" fill=var(--accent-warm) />
+
+          <!-- Links x-14 y-14 -->
+          <line x1="08" y1="18" x2="18" y2="08" stroke=var(--accent-warm) stroke-width="2" />
+          <line x1="18" y1="08" x2="28" y2="18" stroke=var(--accent-warm) stroke-width="2" />
+
+          <!-- Text -->
+          <text x="40" y="25" font-size="16" font-family="system-ui, sans-serif" fill="currentColor" font-weight="600">
+            GoudaMesh
+          </text>
+        </svg>
+
+      </a>
+
+      <div class="nav-links">
+        <div id="menu-nl" class="lang active">
+          <a href="index.html" class="nav-welkom">Welkom</a>
+          <a href="mesh.html" class="nav-mesh">Mesh</a>
+          <a href="meedoen.html" class="nav-meedoen">Meedoen</a>
+          <a href="contact.html" class="nav-contact">Contact</a>
+        </div>
+        <div id="menu-en" class="lang">
+          <a href="index.html" class="nav-welkom">Welcome</a>
+          <a href="mesh.html" class="nav-mesh">Mesh</a>
+          <a href="meedoen.html" class="nav-meedoen">Meedoen</a>
+          <a href="contact.html" class="nav-contact">Contact</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌗</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Pagina-inhoud -->
+  <div class="container delayed">
+
+    <div id="body-nl" class="lang">
+      <h1>Meedoen</h1>
+<p>Lijkt het je leuk om onderdeel te worden van een lokaal, onafhankelijk netwerk? Meedoen aan <strong>GoudaMesh</strong> is volledig vrijblijvend en draait om eigen initiatief. Of je nu een tech-liefhebber bent of gewoon nieuwsgierig bent naar draadloze techniek: iedereen kan bijdragen aan de dekking in en rond Gouda.</p>
+<h2 id="hoe-kun-je-aanhaken-">Hoe kun je aanhaken?</h2>
+<ol>
+<li><strong>Ontdek de wereld van Meshtastic: </strong>
+Verdiep je in de online documentatie van het wereldwijde <a href="https://meshtastic.org">Meshtastic-project</a>. Hier vind je alles over de techniek, de benodigde software en hoe je zelfstandig aan de slag kunt gaan met dit open-source platform.</li>
+<li><strong>Plaats je eigen node: </strong>
+De kracht van het netwerk zit in de spreiding. Door zelf een node (een klein apparaatje met antenne) te installeren op je vensterbank, balkon of dak, word je een schakel in het netwerk. Populaire en betaalbare hardware hiervoor zijn bijvoorbeeld de Heltec V3 of WisBlock modules.</li>
+<li><strong>Experimenteer en deel: </strong>
+GoudaMesh is een speeltuin voor mesh-netwerken. Test hoe ver je signaal reikt in de stad, probeer verschillende antennes uit of bouw een node op zonne-energie. Door je node simpelweg &#39;in de lucht&#39; te houden, help je mee om de mogelijkheden in Gouda in kaart te brengen.</li>
+</ol>
+<blockquote>
+<p><strong>Samen experimenteren:</strong> GoudaMesh is een open initiatief. Er zijn geen verplichtingen en geen centrale organisatie; het netwerk groeit organisch door de actieve bijdrage van iedereen die een node plaatst.</p>
+</blockquote>
+
+
+      <h2>Verder kijken</h2>
+
+<p>
+Sommige mensen delen hun experimenten en vragen in een Discord.
+Dat is geen vereiste, maar kan handig zijn als je wilt meekijken of iets wilt vragen.
+</p>
+
+<p>
+We zijn bezig een GoudaMesh Discord-server op te zetten: <a href="https://discord.gg/7rMvZNnKKb">bekijk de GoudaMesh Discord hier</a>.
+</p>
+
+    </div>
+    <div id="body-en" class="lang">
+      <h1>Join In</h1>
+<p>Would you like to become part of a local, independent network? Joining <strong>GoudaMesh</strong> is entirely voluntary and revolves around your own initiative. Whether you are a tech enthusiast or just curious about wireless technology: anyone can contribute to the coverage in and around Gouda.</p>
+<h2 id="how-to-get-started">How to get started?</h2>
+<ol>
+<li><strong>Discover the world of Meshtastic:</strong>
+Dive into the online documentation of the global <a href="https://meshtastic.org">Meshtastic project</a>. Here you will find everything about the technology, the required software, and how to get started independently with this open-source platform.</li>
+<li><strong>Place your own node:</strong>
+The strength of the network lies in its distribution. By installing a node (a small device with an antenna) on your windowsill, balcony, or roof, you become a link in the network. Popular and affordable hardware for this includes Heltec V3 or WisBlock modules.</li>
+<li><strong>Experiment and share:</strong>
+GoudaMesh is a playground for mesh networks. Test how far your signal reaches in the city, try out different antennas, or build a solar-powered node. By simply keeping your node 'on air', you help map the possibilities in Gouda.</li>
+</ol>
+<blockquote>
+<p><strong>Experimenting together:</strong> GoudaMesh is an open initiative. There are no obligations and no central organization; the network grows organically through the active contribution of everyone who places a node.</p>
+</blockquote>
+
+
+      <h2>Look Further</h2>
+
+<p>
+Some people share their experiments and questions on Discord.
+This is not a requirement, but it can be useful if you want to follow along or ask something.
+</p>
+
+<p>
+We are currently setting up a GoudaMesh Discord server: <a href="https://discord.gg/7rMvZNnKKb">view the GoudaMesh Discord here</a>.
+</p>
+
+    </div>
+
+    <footer class="delayed"></footer>
+  </div>
+
+  <!-- JS als laatste -->
+  <script src="assets/main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>
