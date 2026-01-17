@@ -1,0 +1,57 @@
+<div class="nav-inner">
+  <a href="index.html" class="nav-logo" aria-label="GoudaMesh">
+    <!--svg class="logo-svg" viewBox="0 0 120 24" aria-hidden="true"-->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134 36" role="img" aria-label="GoudaMesh logo"
+      class="logo-svg">
+      <!-- Background shape -->
+      <rect x="0" y="0" width="36" height="36" rx="8" fill=var(--accent-dark) opacity="1" />
+
+      <!-- Nodes -->
+      <circle cx="08" cy="18" r="4" fill=var(--accent-warm) />
+      <circle cx="18" cy="08" r="4" fill=var(--accent-warm) />
+      <circle cx="28" cy="18" r="4" fill=var(--accent-warm) />
+
+      <!-- Links x-14 y-14 -->
+      <line x1="08" y1="18" x2="18" y2="08" stroke=var(--accent-warm) stroke-width="2" />
+      <line x1="18" y1="08" x2="28" y2="18" stroke=var(--accent-warm) stroke-width="2" />
+
+      <!-- Text -->
+      <text x="40" y="25" font-size="16" font-family="system-ui, sans-serif" fill=var(--accent-dark) font-weight="600">
+        GoudaMesh
+      </text>
+    </svg>
+  </a>
+
+  <button class="hamburger" aria-label="Menu" aria-expanded="false" onclick="myFunction()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!--a href="index.html" class="nav-logo">GoudaMesh</a-->
+  <div class="nav-links">
+    <div id="menu-nl" class="lang active">
+      <a href="index.html" class="nav-welkom">Welkom</a>
+      <a href="mesh.html" class="nav-mesh">Mesh</a>
+      <a href="meedoen.html" class="nav-meedoen">Meedoen</a>
+      <a href="contact.html" class="nav-contact">Contact</a>
+      <span class="lang-switch">
+        <button class="active" onclick="setLang('nl')">NL</button>|<button onclick="setLang('en')">EN</button>
+        <button onclick="toggleTheme()">🌗</button>
+        <!--button class="theme-toggle" onclick="toggleTheme()">🌗</button-->
+      </span>
+    </div>
+    <div id="menu-en" class="lang active">
+      <a href="index.html" class="nav-welkom">Welcome</a>
+      <a href="mesh.html" class="nav-mesh">Mesh</a>
+      <a href="meedoen.html" class="nav-meedoen">Join</a>
+      <a href="contact.html" class="nav-contact">Contact Us</a>
+      <span class="lang-switch">
+        <button onclick="setLang('nl')">NL</button>|<button class="active" onclick="setLang('en')">EN</button>
+      <button onclick="toggleTheme()">🌗</button>
+      <!--button class="theme-toggle" onclick="toggleTheme()">🌗</button-->
+</span>
+    </div>
+  </div>
+
+</div>
